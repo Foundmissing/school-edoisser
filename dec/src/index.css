@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #00d8ff;
+  --primary-purple: #6a00ff;
+}
+
+@layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
+
+  h1 {
+    @apply font-bold text-3xl;
+  }
+
+  li {
+    @apply px-4;
+  }
+
+  button {
+    @apply bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)]
+     rounded-3xl py-2 px-6 ml-4 w-fit;
+  }
+}
+
+@layer utilities {
+  .cols {
+    grid-template-columns: repeat(auto-fit, minmax(min(14.5rem, 100%), 1fr));
+  }
+}
